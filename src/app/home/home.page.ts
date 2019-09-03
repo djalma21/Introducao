@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -18,7 +19,7 @@ export class HomePage {
 
 
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   trocarCor():void{
     console.log('Chamou trocarCor!');
@@ -52,5 +53,8 @@ export class HomePage {
   defineNome(event): void{
     console.log(event.detail.value);
     this.nome = event.detail.value;
+  }
+  irParaDetalhes(){
+    this.router.navigate(['/detalhes']);
   }
 }

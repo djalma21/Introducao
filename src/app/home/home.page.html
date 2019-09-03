@@ -25,7 +25,7 @@
 
   <ion-item>
     <ion-label>Sexo</ion-label>
-    <ion-select placeholder="sexo" (ionCharge)="selecionaSexo(Sevent)">
+    <ion-select placeholder="sexo" (ionCharge)="selecionaSexo($event)">
     <ion-select-option value="feminino">Feminino</ion-select-option>
     <ion-select-option value="masculino">Masculino</ion-select-option>
     </ion-select>
@@ -33,10 +33,10 @@
 
   <ion-item>
     <ion-label>Nome</ion-label>
-    <ion-input placeholder="nome" (ionChange)="defineNome(Sevent)"></ion-input>
+    <ion-input placeholder="nome" (ionChange)="defineNome($event)"></ion-input>
   </ion-item>
 
-  <ion-button padding routerLink="/detalhes" color="primary"
+  <ion-button padding (click)="irParaDetalhes()" color="primary"
   shape="round" expand="full" >
      Ok
    </ion-button>
