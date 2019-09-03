@@ -7,10 +7,12 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  nome: string = "Djalma";
+  nome = " ";
   cor = "primary";
 
   humor = "sad";
+
+  sexo = " ";
 
   checked_humor = false;
 
@@ -42,4 +44,13 @@ export class HomePage {
     }
   }
 
+  selecionaSexo(event): void{
+    console.log(event.detail.value);
+    this.sexo = event.detail.value;
+  }
+
+  defineNome(event): void{
+    console.log(event.detail.value);
+    this.nome = event.detail.value;
+  }
 }
